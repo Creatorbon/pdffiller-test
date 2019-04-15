@@ -109,6 +109,7 @@ getRandomColor = () => {
 window.onload = function loadLines() {
     for (var i = 0; i < params.lines.length; i++) {
         var line = document.createElement('div');
+        line.className = 'line'
 
         line.style.height = document.documentElement.clientHeight / params.lines.length + 'px';
         line.style.display = 'flex';
@@ -137,7 +138,7 @@ window.onload = function loadLines() {
         }
         document.body.appendChild(line);
     }
-    var elements = document.body.children;
+    var elements = document.querySelectorAll('.line');
     console.log(elements.length)
 
     for (var i = 0; i < elements.length; i++) {
