@@ -138,11 +138,17 @@ window.onload = function loadLines() {
         document.body.appendChild(line);
     }
     var elements = document.body.children;
+    console.log(elements.length)
 
     for (var i = 0; i < elements.length; i++) {
+        debugger;
+        console.log(elements)
         var updateTime = params.lines[i].updateTime;
         var arr = elements[i].childNodes;
+        console.log(arr)
         var newArr = Array.from(arr);
+        console.log(newArr)
+
 
         for (var j = 0; j < newArr.length; j++) {
             setInterval(changeColor(newArr[j]),
