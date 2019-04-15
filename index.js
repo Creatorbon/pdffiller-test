@@ -109,7 +109,7 @@ getRandomColor = () => {
 window.onload = function loadLines() {
     for (var i = 0; i < params.lines.length; i++) {
         var line = document.createElement('div');
-        line.className = 'line'
+        line.className = 'line';
 
         line.style.height = document.documentElement.clientHeight / params.lines.length + 'px';
         line.style.display = 'flex';
@@ -117,7 +117,7 @@ window.onload = function loadLines() {
         for (var key in params.lines[i]) {
             switch (key) {
                 case 'background':
-                    line.style[key] = params.lines[i][key]
+                    line.style[key] = params.lines[i][key];
                     break;
 
                 case 'elements':
@@ -139,17 +139,11 @@ window.onload = function loadLines() {
         document.body.appendChild(line);
     }
     var elements = document.querySelectorAll('.line');
-    console.log(elements.length)
 
     for (var i = 0; i < elements.length; i++) {
-        debugger;
-        console.log(elements)
         var updateTime = params.lines[i].updateTime;
         var arr = elements[i].childNodes;
-        console.log(arr)
         var newArr = Array.from(arr);
-        console.log(newArr)
-
 
         for (var j = 0; j < newArr.length; j++) {
             setInterval(changeColor(newArr[j]),
