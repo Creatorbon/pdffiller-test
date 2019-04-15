@@ -1,0 +1,10 @@
+{
+  "name": "pdffiller-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://creatorbon.github.io/pdffiller-test",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
